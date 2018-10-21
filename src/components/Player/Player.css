@@ -5,22 +5,33 @@
   justify-content: space-evenly;
   box-sizing: border-box;
   border: 2px solid black;
+  width: 300px;
 }
 
 .Player__name {
   margin: 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Player__score {
   margin: 10px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Player__button {
   font-size: 20px;
   font-weight: 900;
   color: #003366;
-  padding: 5px;
-  text-transform: uppercase;
+  width: 50px;
   cursor: pointer;
   transition: 1s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
