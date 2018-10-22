@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import App from './App';
 import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
@@ -39,4 +39,28 @@ it('should add new player', () => {
   expect(players.length).toEqual(1);
   expect(players[0].name).toEqual('Ania');
   expect(players[0].score).toEqual(0);
-})
+});
+
+it('should remove player', () => {
+  const appComponent = mount(<App />);
+
+  const players = [
+    {
+        name: 'Kunegunda',
+        score: 5
+    },
+    {
+        name: 'Antoś',
+        score: 0
+    }
+  ]
+
+  appComponent.setState({ players });
+
+  const removeButton = appComponent.find('.Player__button_Remove').at(0);
+  removeButton.simulate('click');
+
+  const playerAfterRemove = appComponent.state('players');
+
+  expect(playerAfterRemove.length).toEqual(players.length -1);
+});

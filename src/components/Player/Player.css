@@ -4,13 +4,16 @@
   margin: 10px;
   justify-content: space-evenly;
   box-sizing: border-box;
-  border: 2px solid black;
-  width: 300px;
+  border: 2px solid #2980b9;
+  max-width: 500px;
+  background: #2980b9;
+  border-radius: 50px;
+  color: #fff;
 }
 
 .Player__name {
   margin: 10px;
-  width: 200px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +27,7 @@
   justify-content: center;
 }
 
-.Player__button {
+.Player__button, .Player__button_Remove {
   font-size: 20px;
   font-weight: 900;
   color: #003366;
@@ -34,4 +37,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
+
